@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.navbar-logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-links a:hover {
+  opacity: 1;
+}
+

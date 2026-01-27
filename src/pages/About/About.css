@@ -1,0 +1,248 @@
+/* ABOUT / BIOGRAPHY */
+.about__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 120px;
+}
+
+.about__sidebar button {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #777;
+    padding: 0.4rem 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+/* línea lateral */
+.about__sidebar button::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.25s ease;
+}
+
+/* hover */
+.about__sidebar button:hover {
+    color: #000;
+}
+
+/* estado activo */
+.about__sidebar button.active {
+    font-weight: 600;
+    color: #000;
+}
+
+.about__sidebar button.active::before {
+    background: linear-gradient(135deg, #00ffd5, #ff00c8);
+}
+
+[data-theme='dark'] .about__sidebar button {
+    color: #fff;
+}
+
+[data-theme='dark'] .about__sidebar button:hover {
+    color: #ff0000;
+}
+
+[data-theme='dark'] .about__sidebar button.active {
+    color: #ff0000;
+}
+
+
+
+/* about content */
+
+.about__content {
+    width: 600px;
+    height: 300px;
+}
+
+.about__title h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text, #111);
+    margin: 0;
+}
+
+/* Descripción inicial */
+.about__description {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Banner principal */
+.about__banner {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,
+            #000 0%,
+            #0f0f0f 60%,
+            #111 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.about__banner img {
+    width: 100%;
+}
+
+/*dividir biografia*/
+
+.section-divider {
+    width: 100%;
+    margin: 4rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.section-divider::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.section-divider span {
+    background: var(--bg, #fff);
+    padding: 0 1.2rem;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    z-index: 1;
+}
+
+
+/* biografia content */
+
+.about_description {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+/* Sidebar izquierda (Biografía, Pasatiempos...) */
+.about_description>div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about_description>div:first-child p {
+    font-size: 0.95rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.about_description>div:first-child p:first-child {
+    font-weight: 600;
+    color: #000;
+}
+
+[data-theme='dark'] .about_description p {
+    color: #fff;
+}
+
+/* Texto principal */
+.about_description>div:last-child {
+    max-width: 600px;
+}
+
+.about_description p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* utilidades */
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+    .about_description {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .w-50 {
+        width: 100%;
+    }
+
+    .about__title h1 {
+        font-size: 2.2rem;
+    }
+
+    .about__banner {
+        height: 240px;
+    }
+}
+
+.about__content {
+    animation: fadeIn 0.4s ease;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .about__sidebar {
+        flex-direction: row;
+        gap: 1.5rem;
+        position: relative;
+        top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .about__sidebar button::before {
+        display: none;
+    }
+}
