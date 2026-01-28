@@ -1,4 +1,3 @@
-
 const Card = ({ icon = '', alt = '' }) => {
   return (
     <div className="card text-center me-3" style={{ width: '10rem' }}>

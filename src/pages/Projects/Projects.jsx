@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import Modal from '../../components/Modal/Modal';
+import './Projects.css'
 import ProjectsGrid from '../../components/Projects/ProjectsGrid';
 import Parrafo from '../../components/Texts/Parrafo';
 import { projects } from '../../data/projects';
 import './Projects.css';
+import PreviewProject from './PreviewProject';
 
 const Projects = () => {
   const [selectProject, setSeletedProject] = useState(null);
@@ -37,32 +38,9 @@ const Projects = () => {
         onSelectProject={handleProject}
       />
 
-      <Modal
-        id="projects"
-        tamaño="xl"
-        title={selectProject?.title}
-        contenido={
-          selectProject && (
-            <div className='container w-75'>
-              <p>{selectProject.descripcion2}</p>
-
-              <div className='preview__images'>
-                <img
-                  src={selectProject.image}
-                  alt={selectProject.title}
-                  className="img-fluid mb-3"
-                />
-              </div>
-              <h1 className='preview__title'>Caracteristicas</h1>
-              <p>{selectProject.descripcion2}</p>
-
-              <h1 className='preview__title'>Principales tecnologias utilizadas</h1>
-              <p>{selectProject.descripcion2}</p>
-            </div>
-          )
-        }
+      <PreviewProject
+        selectProject={selectProject}
       />
-
     </div>
   )
 }

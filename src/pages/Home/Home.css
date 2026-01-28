@@ -1,5 +1,9 @@
-/* estilos componente description.jsx */
+/* styles del home */
+
 .home {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     min-height: calc(100vh - 120px);
     padding: 2rem 1rem;
 }
@@ -12,6 +16,7 @@
 }
 
 .home__description {
+    width: 100%;
     max-width: 600px;
 }
 
@@ -20,6 +25,7 @@
     line-height: 1.7;
     opacity: 0.9;
 }
+
 
 .home__skills {
     margin-top: 2rem;
@@ -39,7 +45,6 @@
     font-weight: 500;
     opacity: 0.9;
 }
-
 
 .home__cv .btn {
     padding: 0.6rem 1.5rem;
@@ -63,6 +68,7 @@
     opacity: 0.8;
 }
 
+
 .dark .home__title h1,
 .dark .home__description p,
 .dark .home__skills p,
@@ -70,20 +76,7 @@
     color: #f1f1f1;
 }
 
-/*  RESPONSIVE */
-
-@media (max-width: 768px) {
-    .home__description {
-        width: 100% !important;
-    }
-
-    .home__title h1 {
-        font-size: 2rem;
-    }
-}
-
-/* estilo componente Skills.jsx */
-
+/*** styles skill home ***/
 .icon-js {
     color: #f7df1e;
 }
@@ -143,6 +136,9 @@
 .icon-api {
     color: #ff9800;
 }
+.icon-nginx {
+    color: #00B140;
+}
 
 [data-theme="dark"] .icon-github {
     color: #ddd;
@@ -183,7 +179,6 @@
         box-shadow 0.25s ease;
 }
 
-
 .card p {
     font-size: 0.9rem;
     font-weight: 500;
@@ -201,7 +196,6 @@
     transform: scale(1.15);
 }
 
-
 [data-theme="dark"] .card {
     background-color: #1e1e1e;
     border-color: #2a2a2a;
@@ -211,24 +205,92 @@
     color: #ddd;
 }
 
+/*** styles carousel y proyectos home */
 
-
-@media (max-width: 1024px) {
-    .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.projects-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 2rem 0;
 }
 
 
+.project-card {
+    width: 100%;
+    max-width: 320px;
+    min-height: 360px;
+
+    border: 1.5px dashed #dcdcdc;
+    border-radius: 18px;
+
+    background: #fff;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .12);
+}
+
+[data-theme="dark"] .project-card {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+
+.project-card__image {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+
+.project-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card__content {
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.project-card__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.project-card__description {
+    font-size: .9rem;
+    line-height: 1.4;
+    opacity: .85;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.carousel-control-prev span,
+.carousel-control-next span {
+    background-color: #2a2a2a;
+}
+
+.projects-section .swiper-slide,
+.projects-section .keen-slider__slide {
+    width: auto !important;
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+}

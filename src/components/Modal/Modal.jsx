@@ -9,7 +9,7 @@ const Modal = ({ id = '', contenido = '', title = '', tamaño = '' }) => {
             <div className={`modal-dialog modal-${tamaño} modal-dialog-scrollable`}>
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h1 className="modal-title fs-5 text-uppercase">{title}</h1>
+                        <h1 className="modal-title fs-5">{title}</h1>
                         <button
                             type="button"
                             className="btn-close"

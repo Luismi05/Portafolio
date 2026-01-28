@@ -1,37 +1,15 @@
-import { FaBootstrap, FaCss3, FaGitAlt, FaGithub, FaJs, FaLaravel, FaPhp, FaReact, FaWordpress } from 'react-icons/fa';
-import { SiPostgresql, SiMysql, SiJsonwebtokens, SiVite, } from 'react-icons/si';
 import Card from '../../components/Cards/Card';
 import Parrafo from '../../components/Texts/Parrafo';
-import { MdApi, MdSecurity } from 'react-icons/md';
 import Divider from '../../components/Divider/Divider';
+import { skills } from '../../data/skills';
 
 const Skills = () => {
-
-    const list = [
-        { label: 'JavaScript', icon: <FaJs className='skill-icon icon-js' /> },
-        { label: 'React', icon: <FaReact className='skill-icon icon-react' /> },
-        { label: 'Php', icon: <FaPhp className='skill-icon icon-php' /> },
-        { label: 'Laravel', icon: <FaLaravel className='skill-icon icon-laravel' /> },
-        { label: 'Css', icon: <FaCss3 className='skill-icon icon-css' /> },
-        { label: 'Bootstrap', icon: <FaBootstrap className='skill-icon icon-bootstrap' /> },
-        { label: 'PostgreSQL', icon: <SiPostgresql className='skill-icon icon-postgresql' /> },
-        { label: 'MySQL', icon: <SiMysql className='skill-icon icon-mysql' /> },
-        { label: 'Jwt', icon: <SiJsonwebtokens className='skill-icon icon-jwt' /> },
-        { label: 'Sanctum', icon: <MdSecurity className='skill-icon icon-laravel' /> },
-        { label: 'Git', icon: <FaGitAlt className='skill-icon icon-git' /> },
-        { label: 'GitHub', icon: <FaGithub className='skill-icon icon-github' /> },
-        { label: 'Vite', icon: <SiVite className='skill-icon icon-vite' /> },
-        { label: 'REST API', icon: <MdApi className='skill-icon icon-api' /> },
-        { label: 'WordPress', icon: <FaWordpress className='skill-icon icon-wordpress' /> },
-    ]
 
     return (
         <div className='mt-5'>
             <Divider
                 text='Skills'
             />
-
-            {/* Title */}
             <header className="skills__title">
                 <h1>
                     Skills más utilizadas en mis proyectos
@@ -48,17 +26,17 @@ const Skills = () => {
             </section>
 
             <div className="skills-grid">
-                {list.map((skill, index) => (
+                {skills.map(({ label, icon: Icon, className }, index) => (
                     <Card
                         key={index}
-                        icon={skill.icon}
-                        alt={skill.label}
+                        icon={<Icon className={`skill-icon ${className}`} />}
+                        alt={label}
                     />
                 ))}
             </div>
 
+
         </div>
     )
 }
-
 export default Skills

@@ -54,7 +54,6 @@ export const studies = [
 
 ]
 
-
 export const sections = {
     biografia: {
         title: 'Mi Biografía',

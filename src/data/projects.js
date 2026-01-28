@@ -17,6 +17,7 @@ export const projects = [
             'digital desarrollada permitió centralizar la información, reducir errores operativos y mejorar la ',
             'comunicación entre el personal asistencial y administrativo, logrando así una gestión más eficiente, ágil y confiable.'
         ],
+
         caracteristicas: {
             front: {
                 title: 'Front-end',
@@ -61,8 +62,7 @@ export const projects = [
                 ]
             }
         },
-
-        tech: ['Html', 'JavaScript', 'Jquery', 'Php', 'Css', 'MySQL'],
+        skills: [1, 3, 5, 8, 16, 17, 18],
         image: '../public/banner_turnos.png',
         image2: '../public/turnos.png'
     },
@@ -81,7 +81,33 @@ export const projects = [
             'herramientas y buenas prácticas actuales que mejoran el rendimiento, la seguridad, la experiencia de ',
             'usuario y la facilidad de mantenimiento del sitio. ',
         ],
-        tech: ['Php', 'WordPress', 'Gutenberg ', 'Mysql'],
+        caracteristicas: {
+            front: {
+                title: 'Front-end',
+                content: [
+                    'El front-end de esta página web fue desarrollado a partir de la plantilla Avril, la cual fue personalizada para adaptarse a los requerimientos del proyecto. ',
+                    'Se utilizó Gutenberg como editor de bloques para la creación, adición y edición del contenido del sitio web, ',
+                    'además de integrar diferentes plugins que permitieron la creación de formularios, tablas y otros elementos dinámicos necesarios para el funcionamiento de la página.'
+                ],
+            },
+            back: {
+                title: 'Back-end',
+                content: [
+                    'El back-end de este proyecto fue desarrollado en PHP puro, utilizando MySQL como motor de base de datos. ',
+                    'Se implementaron bloques de código personalizados para realizar filtros por cédula y permitir la descarga de certificados en formato PDF, ',
+                    'garantizando un procesamiento eficiente y seguro de la información.'
+                ]
+            },
+
+            deploy: {
+                title: 'Despliegue',
+                content: [
+                    'El despliegue de esta página web se realizó en un servicio de hosting, donde se configuraron correctamente los diferentes registros DNS, ',
+                    'asegurando el correcto direccionamiento del dominio y la disponibilidad del sitio para los usuarios finales.'
+                ]
+            }
+        },
+        skills: [3, 5, 8, 15],
         image: '../public/banner_wp.png',
         image2: '../public/web_adida.png',
     },
@@ -101,7 +127,40 @@ export const projects = [
             'trazabilidad de la información y una gestión más confiable para el personal administrativo y de seguridad.'
 
         ],
-        tech: ['Laravel', 'React', 'PostgreSQL'],
+        caracteristicas: {
+            front: {
+                title: 'Front-end',
+                content: [
+                    'El front-end de este sistema fue desarrollado en ReactJS, mediante la creación de componentes eficientes y reutilizables, así como el uso de hooks para la gestión del estado y la lógica de la aplicación. ',
+                    'El sistema consume APIs expuestas desde el back-end, permitiendo una comunicación fluida y desacoplada entre ambas capas. ',
+                ]
+            },
+            back: {
+                title: 'Back-end',
+                content: [
+                    'El back-end de este proyecto fue desarrollado en Laravel, siguiendo los lineamientos del patrón de arquitectura MVC. ',
+                    'La aplicación se conecta a una base de datos PostgreSQL y expone sus funcionalidades al front-end a través de APIs seguras y bien estructuradas.',
+                ]
+            },
+
+            auth: {
+                title: 'Autenticación',
+                content: [
+                    'El proyecto cuenta con un sistema de autenticación robusto y seguro para el registro y acceso de usuarios. ',
+                    'La autenticación está basada en Laravel Spatie para la configuración de roles y permisos, junto con la protección de rutas mediante Laravel Sanctum. ',
+                    'Además, se implementan middlewares que refuerzan la seguridad y validan la autenticación a través de tokens.'
+                ]
+            },
+
+            deploy: {
+                title: 'Despliegue',
+                content: [
+                    'El despliegue de este sistema se realiza en el VPS de la empresa, utilizando Nginx como servidor web. ',
+                    'Se configura el dominio y se gestionan correctamente los registros DNS para apuntar al VPS, garantizando estabilidad, seguridad y disponibilidad del sistema.'
+                ]
+            },
+        },
+        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18],
         image: '../public/banner_control.png',
         image2: '../public/login_acceso.png',
         image3: '../public/panel_acceso.png'
@@ -109,7 +168,7 @@ export const projects = [
 
     {
         id: 4,
-        title: 'Sistema de correos correos masivos',
+        title: 'Sistema de correos masivos',
         descripcion: ['Plataforma de envíos masivos de correos electrónicos, diseñada como una solución completa y adaptable a ',
             'las necesidades del usuario. Aunque ya se lanzó una primera fase funcional del proyecto, se encuentra en  ',
             'constante evolución. ',
@@ -124,11 +183,45 @@ export const projects = [
             'la tasa de envío para garantizar la entrega efectiva. '
 
         ],
-        caracteristicas: [],
-        tech: ['laravel', 'React', 'PostgreSQL'],
+        caracteristicas: {
+            front: {
+                title: 'Front-end',
+                content: [
+                    'El front-end de este sistema de envíos masivos fue desarrollado en ReactJS, mediante la creación de componentes eficientes y reutilizables, así como el uso de hooks para la gestión del estado, formularios y flujos de envío de correos. ',
+                    'El sistema consume APIs expuestas desde el back-end para la gestión de campañas, listas de destinatarios, plantillas y estados de envío, permitiendo una comunicación fluida y desacoplada entre ambas capas. ',
+                ]
+            },
+            back: {
+                title: 'Back-end',
+                content: [
+                    'El back-end de este proyecto fue desarrollado en Laravel, siguiendo los lineamientos del patrón de arquitectura MVC. ',
+                    'La aplicación se conecta a una base de datos PostgreSQL y gestiona la lógica de envío masivo, auditoría y control de correos, exponiendo sus funcionalidades al front-end a través de APIs seguras y bien estructuradas.',
+                ]
+            },
+
+            auth: {
+                title: 'Autenticación',
+                content: [
+                    'El proyecto cuenta con un sistema de autenticación robusto y seguro para el registro y acceso de usuarios al sistema de envíos masivos. ',
+                    'La autenticación está basada en Laravel Spatie para la configuración de roles y permisos, junto con la protección de rutas mediante Laravel Sanctum. ',
+                    'Además, se implementan middlewares que refuerzan la seguridad, controlan el acceso a las funcionalidades del sistema y validan la autenticación a través de tokens.'
+                ]
+            },
+
+            deploy: {
+                title: 'Despliegue',
+                content: [
+                    'El despliegue de este sistema de envíos masivos se realiza en el VPS de la empresa, utilizando Nginx como servidor web. ',
+                    'Se configura el dominio y se gestionan correctamente los registros DNS para apuntar al VPS, garantizando estabilidad, seguridad y disponibilidad del servicio de envío.'
+                ]
+            },
+
+        },
+        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18],
         image: '../public/banner_mailer.png',
-        image2: '../public/',
-        image3: '../public'
+        image2: '../public/panel_mailer',
+        image3: '../public/groups_mailer',
+        image4: '../public/templater_mailer',
     },
 
 ]
