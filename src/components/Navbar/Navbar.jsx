@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <div className="container">
             <nav className="navbar">
-                <div className="navbar-logo">MiLogo</div>
+                <div className="navbar-logo"><a className="text-decoration-none" href="/">✦</a></div>
 
                 <ul className="navbar-links">
                     <li><a href="/">Inicio</a></li>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 </ul>
 
                 <button className="theme-toggle" onClick={toggleTheme}>
-                    {theme === "light" ? "🌙" : "☀️"}
+                    {theme === "light" ? "☀️ Modo claro " : "🌙 Modo oscuro"}
                 </button>
             </nav>
         </div>

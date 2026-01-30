@@ -11,6 +11,7 @@ const ProjectCard = ({ project }) => {
                         src={image}
                         alt={`Vista previa del proyecto ${title}`}
                         loading="lazy"
+                        draggable='false'
                     />
                 </div>
             )}

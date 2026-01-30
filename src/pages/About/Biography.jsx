@@ -18,7 +18,7 @@ const Biography = () => {
                 />
 
                 <div className='about__banner'>
-                    <img src='../../public/bio.png' />
+                    <img src='../../public/bio.png' draggable='false' />
                 </div>
             </section>
 

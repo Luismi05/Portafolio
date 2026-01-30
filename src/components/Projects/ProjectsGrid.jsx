@@ -17,6 +17,7 @@ const ProjectsGrid = ({ projects, onSelectProject }) => {
                                 src={project.image}
                                 alt={project.title}
                                 className="project__img"
+                                draggable='false'
                             />
 
                             <div className="project__hover">

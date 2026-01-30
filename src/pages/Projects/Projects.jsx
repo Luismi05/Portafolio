@@ -15,8 +15,8 @@ const Projects = () => {
 
   return (
     <div className='w-50 mt-5 mb-3'>
-      <header className="projects__title">
-        <h1>Mis proyectos</h1>
+      <header className="project__title">
+        <h1 className='mb-5'>Mis proyectos</h1>
 
         <Parrafo
           text="En esta sección presento mis proyectos más relevantes.

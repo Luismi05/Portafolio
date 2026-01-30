@@ -40,6 +40,7 @@ const PreviewProject = ({ selectProject }) => {
                             src={selectProject.image}
                             alt={selectProject.title}
                             className="img-fluid mb-3"
+                            draggable='false'
                         />
                     </div>
 
@@ -59,7 +60,7 @@ const PreviewProject = ({ selectProject }) => {
                     {/* CONTENT */}
                     {section && (
                         <div className='preview__content'>
-                            <header className='preview__title'>
+                            <header className='project__title'>
                                 <h1>{section.title}</h1>
                             </header>
 
@@ -71,7 +72,7 @@ const PreviewProject = ({ selectProject }) => {
 
                     <div className='preview__skills'>
                         <header>
-                            <h1 className='preview__title'>Principales Tecnologías Utilizadas</h1>
+                            <h1 className='project__title'>Principales Tecnologías Utilizadas</h1>
                         </header>
 
                         <div className="project-skills d-flex gap-1 mt-5">
