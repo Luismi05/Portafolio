@@ -17,6 +17,11 @@ export const projects = [
             'digital desarrollada permitió centralizar la información, reducir errores operativos y mejorar la ',
             'comunicación entre el personal asistencial y administrativo, logrando así una gestión más eficiente, ágil y confiable.'
         ],
+        impact: ['Se logró organizar y digitalizar un proceso que anteriormente se realizaba de forma manual y desordenada.',
+            'Reducción significativa de errores en los cambios de turno y conflictos operativos entre el personal asistencial.',
+            'Optimización del tiempo de gestión, permitiendo una planificación más eficiente y transparente de los turnos.',
+            'El sistema sentó las bases para futuras mejoras en la gestión de recursos humanos dentro de la organización.'
+        ],
 
         caracteristicas: {
             front: {
@@ -81,6 +86,11 @@ export const projects = [
             'herramientas y buenas prácticas actuales que mejoran el rendimiento, la seguridad, la experiencia de ',
             'usuario y la facilidad de mantenimiento del sitio. ',
         ],
+        impact: ['El cliente obtuvo una presencia digital profesional, alineada con su identidad corporativa.',
+            'La personalización de la plantilla permitió un sitio más claro, funcional y fácil de administrar.',
+            'El proyecto fortaleció mis conocimientos en WordPress, personalización de plantillas y buenas prácticas web.',
+            'Se entregó un sitio optimizado para usabilidad, contenido y estructura, listo para crecer en el tiempo.'
+        ],
         caracteristicas: {
             front: {
                 title: 'Front-end',
@@ -127,6 +137,11 @@ export const projects = [
             'trazabilidad de la información y una gestión más confiable para el personal administrativo y de seguridad.'
 
         ],
+        impact: ['Se implementó un control centralizado de accesos, mejorando la seguridad de las instalaciones.',
+            'Posibilidad de registrar y auditar ingresos de forma ordenada y confiable.',
+            'Reducción de accesos no autorizados gracias a un proceso de validación estructurado.',
+            'Mayor control administrativo y trazabilidad histórica de los accesos realizados.',
+        ],
         caracteristicas: {
             front: {
                 title: 'Front-end',
@@ -160,7 +175,7 @@ export const projects = [
                 ]
             },
         },
-        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18],
+        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18, 19],
         image: '../public/banner_control.png',
         image2: '../public/login_acceso.png',
         image3: '../public/panel_acceso.png'
@@ -182,6 +197,12 @@ export const projects = [
             'destinatarios, enviar correos personalizados (simples o con plantillas HTML), programar envíos y controlar ',
             'la tasa de envío para garantizar la entrega efectiva. '
 
+        ],
+        impact: ['Se desarrolló una plataforma escalable capaz de gestionar campañas de correo masivo de forma organizada.',
+            'Automatización de procesos clave como la gestión de contactos, grupos y plantillas.',
+            'Mejora en la eficiencia operativa frente al envío manual de correos.',
+            'Base sólida para futuras mejoras, permitiendo la evolución continua del sistema.',
+            'El proyecto demuestra capacidad de planificación por fases, mantenimiento y crecimiento progresivo de una aplicación.',
         ],
         caracteristicas: {
             front: {
@@ -217,7 +238,7 @@ export const projects = [
             },
 
         },
-        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18],
+        skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18, 19],
         image: '../public/banner_mailer.png',
         image2: '../public/panel_mailer',
         image3: '../public/groups_mailer',

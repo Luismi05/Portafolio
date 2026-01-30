@@ -6,6 +6,7 @@ import {
     FaHtml5,
     FaJs,
     FaLaravel,
+    FaNpm,
     FaPhp,
     FaReact,
     FaWordpress
@@ -17,7 +18,8 @@ import {
     SiJsonwebtokens,
     SiVite,
     SiJquery,
-    SiNginx
+    SiNginx,
+    SiPnpm
 } from 'react-icons/si';
 
 import { MdApi, MdSecurity } from 'react-icons/md';
@@ -41,4 +43,7 @@ export const skills = [
     { id: 16, label: 'Html', icon: FaHtml5, className: 'icon-api' },
     { id: 17, label: 'Jquery', icon: SiJquery, className: 'icon-postgresql' },
     { id: 18, label: 'Nginx', icon: SiNginx, className: 'icon-nginx' },
+    { id: 19, label: 'NPM', icon: FaNpm, className: 'icon-laravel' },
+    { id: 20, label: 'pnpm', icon: SiPnpm, className: 'icon-api' },
+
 ];

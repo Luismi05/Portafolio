@@ -3,7 +3,6 @@ import './Projects.css'
 import ProjectsGrid from '../../components/Projects/ProjectsGrid';
 import Parrafo from '../../components/Texts/Parrafo';
 import { projects } from '../../data/projects';
-import './Projects.css';
 import PreviewProject from './PreviewProject';
 
 const Projects = () => {

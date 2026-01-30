@@ -1,5 +1,4 @@
 import Divider from "../Divider/Divider";
-import './ProjectsGrid.css';
 
 const ProjectsGrid = ({ projects, onSelectProject }) => {
     return (
@@ -11,8 +10,7 @@ const ProjectsGrid = ({ projects, onSelectProject }) => {
                         <Divider text={project.title} />
 
                         <article className="project__card">
-                            <span className="project__tag">{project.category}</span>
-
+                            
                             <img
                                 src={project.image}
                                 alt={project.title}
