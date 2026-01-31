@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Parrafo from "../../components/Texts/Parrafo"
 import Social from "../../components/Social/Social"
+import cv from '../../assets/home/cv_luis_miguel.pdf'
 
 export const Description = () => {
 
@@ -50,7 +51,7 @@ export const Description = () => {
             {/* CV */}
             <div className="home__cv mt-4">
                 <a
-                    href="/cv.pdf"
+                    href={cv}
                     className="btn btn-dark dark text-decoration-none"
                     target="_blank"
                     rel="noopener noreferrer"

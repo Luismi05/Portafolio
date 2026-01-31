@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Parrafo from '../../components/Texts/Parrafo';
 import { sections } from '../../data/cv';
 import Divider from '../../components/Divider/Divider';
+import banner from '../../assets/about/bio.png'
 
 const Biography = () => {
     const [activeSection, setActiveSection] = useState('biografia');
@@ -18,7 +19,7 @@ const Biography = () => {
                 />
 
                 <div className='about__banner'>
-                    <img src='../../public/bio.png' draggable='false' />
+                    <img src={banner} draggable='false' />
                 </div>
             </section>
 

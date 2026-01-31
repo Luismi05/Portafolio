@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import Modal from '../../components/Modal/Modal';
 import Parrafo from '../../components/Texts/Parrafo';
 import Card from '../../components/Cards/Card';
@@ -8,13 +7,13 @@ import { skills } from '../../data/skills';
 
 const PreviewProject = ({ selectProject }) => {
     const [activeSection, setActiveSection] = useState(null);
+    const [activeImage, setActiveImage] = useState(null);
 
     const hasProject = Boolean(selectProject);
 
-    // Sección activa actual
+    // seccion activa...
     const section = selectProject?.caracteristicas?.[activeSection];
 
-    // Inicializa la primera sección cuando cambia el proyecto
     useEffect(() => {
         if (selectProject?.caracteristicas) {
             const [firstKey] = Object.keys(selectProject.caracteristicas);
@@ -24,12 +23,27 @@ const PreviewProject = ({ selectProject }) => {
         }
     }, [selectProject]);
 
-    // Skills del proyecto (blindado contra null)
+    //blindar los skills...
     const projectSkills = hasProject
         ? skills.filter(skill =>
             selectProject.skills?.includes(skill.id)
         )
         : [];
+
+    // imagenes ....
+    const images = hasProject
+        ? [
+            selectProject.image2,
+            selectProject.image3,
+            selectProject.image4,
+        ].filter(Boolean)
+        : [];
+
+    /* Bloquea scroll cuando el lightbox está activo */
+    useEffect(() => {
+        document.body.style.overflow = activeImage ? 'hidden' : 'auto';
+        return () => (document.body.style.overflow = 'auto');
+    }, [activeImage]);
 
     return (
         <Modal
@@ -40,23 +54,29 @@ const PreviewProject = ({ selectProject }) => {
                 hasProject ? (
                     <div className="container w-75">
 
-                        {/* Descripción general */}
                         {selectProject.descripcion2?.map((text, index) => (
                             <Parrafo key={index} text={text} />
                         ))}
 
-                        {/* Imagen principal */}
-                        <div className="preview__images">
-                            <img
-                                src={selectProject.image}
-                                alt={`Vista previa del proyecto ${selectProject.title}`}
-                                className="img-fluid mb-3"
-                                draggable="false"
-                                loading="lazy"
-                            />
-                        </div>
+                        {images.length > 0 && (
+                            <div className="preview__images">
+                                {images.map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className="preview__image-card"
+                                        onClick={() => setActiveImage(img)}
+                                    >
+                                        <img
+                                            src={img}
+                                            alt={`Vista ${index + 1} del proyecto ${selectProject.title}`}
+                                            loading="lazy"
+                                            draggable="false"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
 
-                        {/* Sidebar */}
                         <aside className="preview__sidebar">
                             {Object.entries(selectProject.caracteristicas || {}).map(
                                 ([key, item]) => (
@@ -73,7 +93,6 @@ const PreviewProject = ({ selectProject }) => {
                             )}
                         </aside>
 
-                        {/* Contenido dinámico */}
                         {section && (
                             <section className="preview__content">
                                 <header className="project__title">
@@ -86,7 +105,6 @@ const PreviewProject = ({ selectProject }) => {
                             </section>
                         )}
 
-                        {/* Tecnologías */}
                         <section className="preview__skills">
                             <header>
                                 <h2 className="project__title">
@@ -107,7 +125,6 @@ const PreviewProject = ({ selectProject }) => {
                             </div>
                         </section>
 
-                        {/* Impacto y resultados */}
                         <section className="preview__conclutions mt-5">
                             <header>
                                 <h2 className="project__title fs-3">
@@ -119,6 +136,20 @@ const PreviewProject = ({ selectProject }) => {
                                 <Parrafo key={index} text={text} />
                             ))}
                         </section>
+
+                        {activeImage && (
+                            <div
+                                className="lightbox"
+                                onClick={() => setActiveImage(null)}
+                            >
+                                <span className="lightbox__close">×</span>
+                                <img
+                                    src={activeImage}
+                                    alt={`Vista ampliada del proyecto ${selectProject.title}`}
+                                    onClick={(e) => e.stopPropagation()}
+                                />
+                            </div>
+                        )}
 
                     </div>
                 ) : null

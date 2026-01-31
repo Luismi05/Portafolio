@@ -52,6 +52,12 @@
     border-radius: 6px;
 }
 
+[data-theme='dark'] .home__cv .btn {
+    background-color: #fff;
+    color: #000;
+}
+
+
 .home__social {
     display: flex;
     gap: 1rem;

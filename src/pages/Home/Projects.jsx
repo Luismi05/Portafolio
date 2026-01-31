@@ -32,9 +32,7 @@ const Projects = () => {
                     />
                 </div>
                 <div className='text-center'>
-                    <button className="btn btn-dark mt-4">
-                        <a href="/projects" className="text-decoration-none text-white">Ver más</a>
-                    </button>
+                    <a href="/projects" className="btn btn-dark mt-5">Ver más</a>
                 </div>
 
             </section>

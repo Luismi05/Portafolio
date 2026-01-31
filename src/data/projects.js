@@ -1,3 +1,14 @@
+import bannerWP from '../assets/projects/banner_wp.png';
+import viewWP from '../assets/projects/web_adida.png'
+import bannerAC from '../assets/projects/banner_turnos.png';
+import bannerCO from '../assets/projects/banner_control.png';
+import viewCO from '../assets/projects/login_acceso.png';
+import viewCOP from '../assets/projects/panel_acceso.png';
+import bannerMA from '../assets/projects/banner_mailer.png';
+import viewMA from '../assets/projects/panel_mailer.png';
+import viewMAG from '../assets/projects/groups_mailer.png';
+import viewMAT from '../assets/projects/templates_mailer.png';
+
 export const projects = [
     {
         id: 1,
@@ -68,7 +79,7 @@ export const projects = [
             }
         },
         skills: [1, 3, 5, 8, 16, 17, 18],
-        image: '../public/banner_turnos.png',
+        image: bannerAC,
         image2: '../public/turnos.png'
     },
 
@@ -118,8 +129,8 @@ export const projects = [
             }
         },
         skills: [3, 5, 8, 15],
-        image: '../public/banner_wp.png',
-        image2: '../public/web_adida.png',
+        image: bannerWP,
+        image2: viewWP,
     },
 
     {
@@ -176,9 +187,9 @@ export const projects = [
             },
         },
         skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18, 19],
-        image: '../public/banner_control.png',
-        image2: '../public/login_acceso.png',
-        image3: '../public/panel_acceso.png'
+        image: bannerCO,
+        image2: viewCO,
+        image3: viewCOP,
     },
 
     {
@@ -239,10 +250,10 @@ export const projects = [
 
         },
         skills: [2, 4, 6, 7, 10, 11, 12, 13, 14, 18, 19],
-        image: '../public/banner_mailer.png',
-        image2: '../public/panel_mailer',
-        image3: '../public/groups_mailer',
-        image4: '../public/templater_mailer',
+        image: bannerMA,
+        image2: viewMA,
+        image3: viewMAG,
+        image4: viewMAT,
     },
 
 ]

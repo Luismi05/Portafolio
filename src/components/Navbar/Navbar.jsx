@@ -5,42 +5,50 @@ const THEME_KEY = "theme";
 
 const Navbar = () => {
     const [theme, setTheme] = useState(() => {
-        // Se ejecuta solo una vez...
         return localStorage.getItem(THEME_KEY) || "light";
     });
 
-    // Aplica el tema al HTML y lo guarda en el stoarge....
+    const [menuOpen, setMenuOpen] = useState(false);
+
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
         localStorage.setItem(THEME_KEY, theme);
     }, [theme]);
 
     const toggleTheme = () => {
-        setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
+        setTheme(prev => (prev === "light" ? "dark" : "light"));
     };
 
     return (
-        <div className="container">
-            <nav className="navbar">
-                <div className="navbar-logo">
-                    <a className="text-decoration-none" href="/">✦</a>
-                </div>
+        <nav className="navbar container">
+            <div className="navbar-logo">
+                <a href="/">✦</a>
+            </div>
 
-                <ul className="navbar-links">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/projects">Proyectos</a></li>
-                    <li><a href="/about">Sobre mí</a></li>
-                </ul>
+            <button
+                className="navbar-toggle"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Abrir menú"
+            >
+                ☰
+            </button>
 
-                <button
-                    className="theme-toggle"
-                    onClick={toggleTheme}
-                    aria-label="Cambiar tema"
-                >
-                    {theme === "light" ? "☀️ Modo claro" : "🌙 Modo oscuro"}
-                </button>
-            </nav>
-        </div>
+            <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
+                <li><a href="/" onClick={() => setMenuOpen(false)}>Inicio</a></li>
+                <li><a href="/projects" onClick={() => setMenuOpen(false)}>Proyectos</a></li>
+                <li><a href="/about" onClick={() => setMenuOpen(false)}>Sobre mí</a></li>
+
+                <li className="theme-item">
+                    <button
+                        className="theme-toggle"
+                        onClick={toggleTheme}
+                        aria-label="Cambiar tema"
+                    >
+                        {theme === "light" ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
+                    </button>
+                </li>
+            </ul>
+        </nav>
     );
 };
 

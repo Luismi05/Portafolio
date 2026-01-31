@@ -1,7 +1,13 @@
+import adida from '../assets/about/adida.png';
+import axity from '../assets/about/axity.png';
+import cua from '../assets/about/cua.png';
+import felix from '../assets/about/felix.png';
+import sena from '../assets/about/sena.png'
+
 export const experience = [
     {
         id: 1,
-        img: '../public/adida.png',
+        img: adida,
         fecha: 'Feb 2024 - Actualmente',
         empresa: 'Adida',
         cargo: 'Desarrollador full-stack',
@@ -11,7 +17,7 @@ export const experience = [
 
     {
         id: 2,
-        img: '../public/axity.png',
+        img: axity,
         fecha: 'Nov 2020 - Oct 2023',
         empresa: 'Axity',
         cargo: 'Desarrollador web',
@@ -25,7 +31,7 @@ export const experience = [
 export const studies = [
     {
         id: 1,
-        img: '../public/cua.png',
+        img: cua,
         fecha: 'Ene 2022 - Actualmente',
         empresa: 'Corporación Universitaria Americana, Medellin',
         cargo: 'Ingeniería de sistemas',
@@ -34,7 +40,7 @@ export const studies = [
 
     {
         id: 2,
-        img: '../public/sena.png',
+        img: sena,
         fecha: 'Jul 2019 - Jul 2020',
         empresa: 'SENA',
         cargo: 'Técnico en sistemas',
@@ -44,7 +50,7 @@ export const studies = [
 
     {
         id: 3,
-        img: '../public/felix.png',
+        img: felix,
         fecha: ' - Nov 2018',
         empresa: 'I.E Felix Henao Botero, Medellin',
         cargo: 'Bachiller',
