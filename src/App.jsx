@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import PageTitle from './hooks/PageTitle'
 import Home from './pages/Home/Home'
@@ -10,7 +10,7 @@ import Layout from './layoyut/Layout'
 
 function App() {
   return (
-    <HashRouter >
+    <BrowserRouter>
       <PageTitle />
 
       <Routes>
@@ -24,7 +24,7 @@ function App() {
         {/* CATCH ALL */}
         <Route path='*' element={<NotFound />} />
       </Routes>
-    </HashRouter >
+    </BrowserRouter>
   )
 }
 
