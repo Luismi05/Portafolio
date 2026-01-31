@@ -1,11 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import PageTitle from './hooks/PageTitle'
-import Home from './pages/Home/Home'
-import About from './pages/About/About'
-import Projects from './pages/Projects/Projects'
-import NotFound from './pages/NotFound/NotFound'
-import Layout from './layoyut/Layout'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import PageTitle from './hooks/PageTitle';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Projects from './pages/Projects/Projects';
+import NotFound from './pages/NotFound/NotFound';
+import Layout from './layoyut/Layout';
+
 
 
 function App() {
