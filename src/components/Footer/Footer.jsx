@@ -22,7 +22,7 @@ const Footer = () => {
           />
 
           <Social
-            url='https://github.com/tu-usuario'
+            url='https://github.com/luismi05'
             Icon={<FaGithub />}
           />
 
