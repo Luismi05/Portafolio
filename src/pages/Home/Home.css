@@ -300,3 +300,22 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* responsive */
+
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
+
+    .home__description {
+        max-width: 100%;
+    }
+
+    .project-card {
+        max-width: 300px;
+    }
+}
+
