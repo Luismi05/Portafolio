@@ -1,6 +1,8 @@
 import bannerWP from '../assets/projects/banner_wp.png';
 import viewWP from '../assets/projects/web_adida.png'
-import bannerAC from '../assets/projects/banner_turnos.png';
+import bannerTU from '../assets/projects/banner_turnos.png';
+import viewTU from '../assets/projects/login_turnos.png';
+import viewTUP from '../assets/projects/panel_turnos.png';
 import bannerCO from '../assets/projects/banner_control.png';
 import viewCO from '../assets/projects/login_acceso.png';
 import viewCOP from '../assets/projects/panel_acceso.png';
@@ -79,8 +81,9 @@ export const projects = [
             }
         },
         skills: [1, 3, 5, 8, 16, 17, 18],
-        image: bannerAC,
-        image2: '../public/turnos.png'
+        image: bannerTU,
+        image2: viewTU,
+        image3: viewTUP,
     },
 
     {
