@@ -27,10 +27,10 @@ const Biography = () => {
                 text='Biografia'
             />
 
-            <section className='about_description w-50 mt-2'>
+            <section className="about__tabs mt-2">
 
-                {/* SIDEBAR */}
-                <aside className='about__sidebar'>
+                {/* SIDEBAR / TABS */}
+                <aside className="about__sidebar">
                     {Object.keys(sections).map(key => (
                         <button
                             key={key}
@@ -43,8 +43,8 @@ const Biography = () => {
                 </aside>
 
                 {/* CONTENT */}
-                <div className='about__content'>
-                    <header className='about__title'>
+                <div className="about__content">
+                    <header className="about__title">
                         <h1>{sections[activeSection].title}</h1>
                     </header>
 
@@ -54,6 +54,7 @@ const Biography = () => {
                 </div>
 
             </section>
+
         </div>
     )
 }

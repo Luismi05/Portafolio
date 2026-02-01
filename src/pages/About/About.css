@@ -1,4 +1,21 @@
-/* ABOUT /  */
+/* layout */
+
+.about__tabs {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.about__content {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    animation: fadeIn 0.4s ease;
+}
+
+/* about, sidebr, tabs */
+
 .about__sidebar {
     display: flex;
     flex-direction: column;
@@ -19,7 +36,7 @@
     transition: all 0.25s ease;
 }
 
-/* línea lateral */
+/* Indicador lateral */
 .about__sidebar button::before {
     content: '';
     position: absolute;
@@ -33,12 +50,12 @@
     transition: all 0.25s ease;
 }
 
-/* hover */
+/* Hover */
 .about__sidebar button:hover {
     color: #000;
 }
 
-/* estado activo */
+/* Active */
 .about__sidebar button.active {
     font-weight: 600;
     color: #000;
@@ -48,26 +65,18 @@
     background: linear-gradient(135deg, #00ffd5, #ff00c8);
 }
 
+/*dark mode sidebar */
+
 [data-theme='dark'] .about__sidebar button {
     color: #fff;
 }
 
-[data-theme='dark'] .about__sidebar button:hover {
-    color: #ff0000;
-}
-
+[data-theme='dark'] .about__sidebar button:hover,
 [data-theme='dark'] .about__sidebar button.active {
     color: #ff0000;
 }
 
-
-
-/* about content */
-
-.about__content {
-    width: 600px;
-    height: 300px;
-}
+/* about, header, intro */
 
 .about__title h1 {
     font-size: 3rem;
@@ -76,7 +85,6 @@
     margin: 0;
 }
 
-/* Descripción inicial */
 .about__description {
     max-width: 900px;
     display: flex;
@@ -84,59 +92,28 @@
     gap: 2rem;
 }
 
-/* Banner principal */
+
+/* about banner */
+
 .about__banner {
     width: 100%;
     height: 320px;
     border-radius: 16px;
-    background: linear-gradient(135deg,
-            #000 0%,
-            #0f0f0f 60%,
-            #111 100%);
+    background: linear-gradient(135deg, #000 0%, #0f0f0f 60%, #111 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
     overflow: hidden;
 }
 
 .about__banner img {
     width: 100%;
-}
-
-/*dividir biografia*/
-
-.section-divider {
-    width: 100%;
-    margin: 4rem 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.section-divider::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.1);
-}
-
-.section-divider span {
-    background: var(--bg, #fff);
-    padding: 0 1.2rem;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #777;
-    z-index: 1;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-/* biografia content */
+/* about biography */
 
 .about_description {
     display: grid;
@@ -145,7 +122,6 @@
     margin-top: 1.5rem;
 }
 
-/* Sidebar izquierda (Biografía, Pasatiempos...) */
 .about_description>div:first-child {
     display: flex;
     flex-direction: column;
@@ -163,11 +139,6 @@
     color: #000;
 }
 
-[data-theme='dark'] .about_description p {
-    color: #fff;
-}
-
-/* Texto principal */
 .about_description>div:last-child {
     max-width: 600px;
 }
@@ -179,7 +150,11 @@
     margin-bottom: 1rem;
 }
 
-/* utilidades */
+[data-theme='dark'] .about_description p {
+    color: #fff;
+}
+
+/* utilities */
 
 .mt-5 {
     margin-top: 3rem;
@@ -193,32 +168,7 @@
     width: 50%;
 }
 
-/* responsive */
-
-@media (max-width: 900px) {
-    .about_description {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .w-50 {
-        width: 100%;
-    }
-
-    .about__title h1 {
-        font-size: 2.2rem;
-    }
-
-    .about__banner {
-        height: 240px;
-    }
-}
-
-.about__content {
-    animation: fadeIn 0.4s ease;
-}
-
-
+/* animations */
 
 @keyframes fadeIn {
     from {
@@ -233,16 +183,79 @@
 }
 
 
+/* responsive */
+
 @media (max-width: 900px) {
+
+    .w-50 {
+        width: 100%;
+    }
+
+    .about__tabs {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .about__sidebar {
         flex-direction: row;
-        gap: 1.5rem;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+
         position: relative;
         top: 0;
+
+        width: 100%;
+        padding: 0.5rem;
         margin-bottom: 1.5rem;
+
+        overflow-x: auto;
+        scrollbar-width: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .about__sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about__sidebar button {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.85rem;
+        border-radius: 999px;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.04);
     }
 
     .about__sidebar button::before {
         display: none;
+    }
+
+    .about__title h1 {
+        font-size: 2.2rem;
+    }
+
+    .about__banner {
+        height: 240px;
+    }
+
+    .about_description {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about__title h1 {
+        font-size: 1.9rem;
+    }
+
+    .about__banner {
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .about_description p {
+        font-size: 0.95rem;
     }
 }
