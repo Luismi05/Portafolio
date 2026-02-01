@@ -142,6 +142,7 @@
 .icon-api {
     color: #ff9800;
 }
+
 .icon-nginx {
     color: #00B140;
 }
@@ -319,3 +320,9 @@
     }
 }
 
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .8rem;
+    }
+}
