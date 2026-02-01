@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectsCard";
 
 const ProjectsSlider = ({ projects = [] }) => {
-    const chunkSize = 3;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+        const handleResize = () => {
+            setIsMobile(mediaQuery.matches);
+        };
+
+        handleResize();
+        mediaQuery.addEventListener("change", handleResize);
+
+        return () => mediaQuery.removeEventListener("change", handleResize);
+    }, []);
+
+    const chunkSize = isMobile ? 1 : 3;
 
     if (!projects.length) return null;
 
@@ -18,23 +34,24 @@ const ProjectsSlider = ({ projects = [] }) => {
             className="carousel slide projects-carousel"
             data-bs-ride="carousel"
         >
-            <div className="carousel">
-                <div className="carousel-inner">
-                    {slides.map((group, index) => (
-                        <div
-                            key={index}
-                            className={`carousel-item ${index === 0 ? "active" : ""}`}
-                        >
-                            <div className="row g-4 justify-content-center">
-                                {group.map(project => (
-                                    <div key={project.id} className="col-md-4">
-                                        <ProjectCard project={project} />
-                                    </div>
-                                ))}
-                            </div>
+            <div className="carousel-inner">
+                {slides.map((group, index) => (
+                    <div
+                        key={index}
+                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                    >
+                        <div className="row g-4 justify-content-center">
+                            {group.map(project => (
+                                <div
+                                    key={project.id}
+                                    className={isMobile ? "col-12" : "col-md-4"}
+                                >
+                                    <ProjectCard project={project} />
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
 
             {showControls && (
