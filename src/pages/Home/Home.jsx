@@ -1,5 +1,5 @@
 import './Home.css'
-import { Description } from './Description'
+import Description from './Description'
 import Skills from './Skills'
 import Projects from './Projects'
 
