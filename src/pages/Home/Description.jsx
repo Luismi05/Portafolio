@@ -30,8 +30,8 @@ const Description = () => {
 
                     <section className="home__description">
                         <Parrafo text="Soy desarrollador full-stack y 
-                        disfruto convertir desafíos en soluciones digitales. No se trata solo de escribir código, s
-                        ino de crear experiencias claras, funcionales y bien pensadas." />
+                        disfruto convertir desafíos en soluciones digitales. No se trata solo de escribir código, 
+                        sino de crear experiencias claras, funcionales y bien pensadas." />
 
                         <Parrafo text="Lo que más disfruto de mi profesión es ver cómo los 
                         problemas reales pueden resolverse de forma digital, y cómo ese 
