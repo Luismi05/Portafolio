@@ -1,4 +1,5 @@
 import bannerWP from '../assets/projects/banner_wp.png';
+import bannerPO from '../assets/projects/banner_portafolio.png';
 import viewWP from '../assets/projects/web_adida.png'
 import bannerTU from '../assets/projects/banner_turnos.png';
 import viewTU from '../assets/projects/login_turnos.png';
@@ -10,6 +11,8 @@ import bannerMA from '../assets/projects/banner_mailer.png';
 import viewMA from '../assets/projects/panel_mailer.png';
 import viewMAG from '../assets/projects/groups_mailer.png';
 import viewMAT from '../assets/projects/templates_mailer.png';
+import viewPO from '../assets/projects/portafolio.png';
+import viewPOR from '../assets/projects/portafolio_me.png';
 
 export const projects = [
     {
@@ -246,7 +249,7 @@ export const projects = [
             deploy: {
                 title: 'Despliegue',
                 content: [
-                    'El despliegue de este sistema de envíos masivos se realiza en el VPS de la empresa, utilizando Nginx como servidor web. ',
+                    'El despliegue de este portafolio se realiza en el VPS personal, utilizando Nginx como servidor web. ',
                     'Se configura el dominio y se gestionan correctamente los registros DNS para apuntar al VPS, garantizando estabilidad, seguridad y disponibilidad del servicio de envío.'
                 ]
             },
@@ -257,6 +260,56 @@ export const projects = [
         image2: viewMA,
         image3: viewMAG,
         image4: viewMAT,
+    },
+
+    {
+        id: 0,
+        title: 'Portafolio personal',
+        descripcion: [
+            'El objetivo de este proyecto fue desarrollar un portafolio web moderno que permitiera presentar de',
+            'forma profesional mi perfil como desarrollador, mostrando mi experiencia, proyectos, habilidades',
+            'técnicas y tecnologías utilizadas. La plataforma fue diseñada para ofrecer una navegación fluida',
+            'una interfaz atractiva y una experiencia de usuario enfocada en destacar la calidad de cada uno de los proyectos desarrollados.'
+        ],
+
+        descripcion2: [
+            'Además de servir como carta de presentación profesional, el portafolio fue concebido como una plataforma',
+            'escalable y de fácil mantenimiento, permitiendo incorporar nuevos proyectos, tecnologías y experiencias laborales',
+            'de manera sencilla. Su diseño responsive garantiza una correcta visualización en dispositivos móviles, tablets y equipos de escritorio.'
+        ],
+
+        impact: [
+            'Consolidó en un solo lugar toda mi experiencia profesional, proyectos y habilidades técnicas.',
+            'Mejoró mi presencia profesional en línea, facilitando la presentación de mi trabajo ante empresas y clientes.',
+            'Permite visualizar cada proyecto con información detallada sobre su desarrollo, tecnologías implementadas y resultados obtenidos.',
+            'Fue desarrollado con un enfoque moderno, priorizando el rendimiento, la experiencia de usuario y un diseño completamente responsive.'
+        ],
+
+        caracteristicas: {
+            front: {
+                title: 'Front-end',
+                content: [
+                    'El front-end de este portafolio fue desarrollado utilizando Vite y React, implementando una arquitectura',
+                    'basada en componentes reutilizables que facilita el mantenimiento y la escalabilidad de la aplicación',
+                    'Para el diseño de la interfaz se emplearon Bootstrap y CSS personalizado, logrando una experiencia moderna',
+                    'responsive e intuitiva, optimizada para ofrecer una navegación fluida y una correcta visualización de los proyectos en cualquier dispositivo.'
+                ]
+            },
+
+            deploy: {
+                title: 'Despliegue',
+                content: [
+                    'La aplicación fue desplegada en un VPS personal utilizando Nginx como servidor web, proporcionando un entorno estable',
+                    'seguro y de alto rendimiento para la publicación del portafolio. ',
+                    'Se configuró el servidor para optimizar la entrega de archivos estáticos, gestionar correctamente las rutas de la aplicación',
+                    'y garantizar un acceso seguro mediante HTTPS, asegurando una experiencia rápida y confiable para los visitantes.'
+                ]
+            }
+        },
+        skills: [2, 6, 12, 13, 18, 20],
+        image: bannerPO,
+        image2: viewPO,
+        image3: viewPOR,
     },
 
 ]
