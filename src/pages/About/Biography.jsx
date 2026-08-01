@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Parrafo from '../../components/Texts/Parrafo';
 import { sections } from '../../data/cv';
 import Divider from '../../components/Divider/Divider';
-import banner from '../../assets/about/bio.png'
+import banner from '../../assets/about/bio.webp';
 
 const Biography = () => {
     const [activeSection, setActiveSection] = useState('biografia');

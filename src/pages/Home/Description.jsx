@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Parrafo from "../../components/Texts/Parrafo";
 import Social from "../../components/Social/Social";
 import cv from '../../assets/home/cv_luis_miguel.pdf';
-import image from '../../assets/home/personal.png';
+import image from '../../assets/home/personal.webp';
 
 const Description = () => {
 

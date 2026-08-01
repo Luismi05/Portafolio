@@ -1,8 +1,8 @@
-import adida from '../assets/about/adida.png';
-import axity from '../assets/about/axity.png';
-import cua from '../assets/about/cua.png';
-import felix from '../assets/about/felix.png';
-import sena from '../assets/about/sena.png'
+import adida from '../assets/about/adida.webp';
+import axity from '../assets/about/axity.webp';
+import cua from '../assets/about/cua.webp';
+import felix from '../assets/about/felix.webp';
+import sena from '../assets/about/sena.webp'
 
 export const experience = [
     {

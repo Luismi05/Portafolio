@@ -1,18 +1,18 @@
-import bannerWP from '../assets/projects/banner_wp.png';
-import bannerPO from '../assets/projects/banner_portafolio.png';
-import viewWP from '../assets/projects/web_adida.png'
-import bannerTU from '../assets/projects/banner_turnos.png';
-import viewTU from '../assets/projects/login_turnos.png';
-import viewTUP from '../assets/projects/panel_turnos.png';
-import bannerCO from '../assets/projects/banner_control.png';
-import viewCO from '../assets/projects/login_acceso.png';
-import viewCOP from '../assets/projects/panel_acceso.png';
-import bannerMA from '../assets/projects/banner_mailer.png';
-import viewMA from '../assets/projects/panel_mailer.png';
-import viewMAG from '../assets/projects/groups_mailer.png';
-import viewMAT from '../assets/projects/templates_mailer.png';
-import viewPO from '../assets/projects/portafolio.png';
-import viewPOR from '../assets/projects/portafolio_me.png';
+import bannerWP from '../assets/projects/banner_wp.webp';
+import bannerPO from '../assets/projects/banner_portafolio.webp';
+import viewWP from '../assets/projects/web_adida.webp'
+import bannerTU from '../assets/projects/banner_turnos.webp';
+import viewTU from '../assets/projects/login_turnos.webp';
+import viewTUP from '../assets/projects/panel_turnos.webp';
+import bannerCO from '../assets/projects/banner_control.webp';
+import viewCO from '../assets/projects/login_acceso.webp';
+import viewCOP from '../assets/projects/panel_acceso.webp';
+import bannerMA from '../assets/projects/banner_mailer.webp';
+import viewMA from '../assets/projects/panel_mailer.webp';
+import viewMAG from '../assets/projects/groups_mailer.webp';
+import viewMAT from '../assets/projects/templates_mailer.webp';
+import viewPO from '../assets/projects/portafolio.webp';
+import viewPOR from '../assets/projects/portafolio_me.webp';
 
 export const projects = [
     {
