@@ -17,7 +17,7 @@ const Skills = () => {
             </header>
             <section className='home__description'>
                 <Parrafo
-                    text='En mi trayectoria como desarrallador he utilizado
+                    text='En mi trayectoria como desarrollador he utilizado
                     y aprendido diversas Skills que han tenido gran impacto positivo en mis proyectos.
                     Me encanta seguir aprendiendo y perfeccionando mis habilidades, soy una persona
                     que le encanta estar en constante evolución y asumir nuevos retos que me permitan 
